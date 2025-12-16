@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "LLM Tracker (Dev)",
+  "version": "0.0.1",
+  "description": "Development: Captures LLM conversations for research",
+
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["interceptor.js"],
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"]
+    }
+  ],
+
+  "host_permissions": ["https://chatgpt.com/*", "https://chat.openai.com/*"]
+}
