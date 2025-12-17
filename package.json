@@ -1,0 +1,24 @@
+{
+  "name": "llm_conversation_research_tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/admingistai/Chatgpt_browser_extention.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/admingistai/Chatgpt_browser_extention/issues"
+  },
+  "homepage": "https://github.com/admingistai/Chatgpt_browser_extention#readme",
+  "dependencies": {
+    "convex": "^1.31.0"
+  }
+}

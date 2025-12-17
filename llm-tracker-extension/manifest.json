@@ -1,8 +1,33 @@
 {
   "manifest_version": 3,
-  "name": "LLM Tracker (Dev)",
-  "version": "0.0.1",
-  "description": "Development: Captures LLM conversations for research",
+  "name": "FreeGPT",
+  "version": "1.0.0",
+  "description": "Get FREE ChatGPT Plus access ($20/month value). In exchange, your conversations are anonymously tracked for research purposes.",
+
+  "permissions": ["storage", "alarms"],
+
+  "host_permissions": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    },
+    "default_title": "FreeGPT"
+  },
+
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
 
   "content_scripts": [
     {
@@ -17,7 +42,5 @@
       "resources": ["interceptor.js"],
       "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"]
     }
-  ],
-
-  "host_permissions": ["https://chatgpt.com/*", "https://chat.openai.com/*"]
+  ]
 }
